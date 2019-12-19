@@ -1,0 +1,18 @@
+.page {
+  opacity: 0;
+  display: flex;
+  position: relative;
+  visibility: hidden;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  transition: .3s;
+  transform: translateY(-50vh);
+  @include responsive-common(flex-direction, row, row, column);
+  &--active {
+    opacity: 1;
+    position: relative;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}

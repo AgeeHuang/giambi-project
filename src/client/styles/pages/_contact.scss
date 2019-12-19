@@ -1,0 +1,26 @@
+.page-contact {
+  font-size: 3rem;
+  &__social-media {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__link:hover {
+    color: #E5A539;
+    border-color: #E5A539;
+  }
+  &__resume-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    margin: 20px;
+    padding: 5px 15px;
+    border: 2px solid;
+    border-radius: 5px;
+    &:hover {
+      color: #E5A539;
+      border-color: #E5A539;
+    }
+  }
+}

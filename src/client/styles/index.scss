@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Racing+Sans+One&display=swap');
+
+@import './base/variables';
+@import './utils/rwd';
+@import './components/light-switch';
+@import './layout/page';
+@import './pages/home';
+@import './pages/about';
+@import './pages/contact';
+@import './pages/experinces';
+@import './themes/theme';
+
+body {
+  margin: 0;
+  font-size: 10px;
+  font-family: 'Racing Sans One', cursive;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  outline: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h3, h4 {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

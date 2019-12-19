@@ -1,0 +1,21 @@
+.page-experinces {
+  &__list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  &__logo {
+    text-align: center;
+    flex: 1;
+  }
+  &__job-title {
+    font-size: 2.4rem;
+  }
+  &__link:hover {
+    text-decoration: underline;
+  }
+  &__time,
+  &__location {
+    font-size: 1.2rem;
+  }
+}

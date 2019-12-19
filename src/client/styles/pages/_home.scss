@@ -1,0 +1,56 @@
+.page-home {
+  &__name {
+    text-align: center;
+  }
+  &__nav {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  &__name,
+  &__nav {
+    margin: 30px;
+  }
+  &__back-btn {
+    cursor: pointer;
+    &:hover {
+      color: #E5A539;
+    }
+  }
+  &__nav-option {
+    margin: 10px 0;
+    cursor: pointer;
+    &:hover {
+      color: #E5A539;
+      border-color: #E5A539;
+    }
+  }
+  &__nav-icon {
+    font-size: 1rem;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 3px;
+    margin-right: 5px;
+  }
+  &__nav-icon,
+  &__nav-name {
+    vertical-align: middle;
+  }
+  &__full-name {
+    font-size: 5rem;
+    line-height: 4rem;
+  }
+  &__footer,
+  &__header {
+    position: absolute;
+    @include responsive-common(font-size, 1.2rem, 1.2rem, 1rem);
+  }
+  &__header {
+    top: 10px;
+    &--hidden {
+      visibility: hidden;
+    }
+  }
+  &__footer {
+    bottom: 10px;
+  }
+}
