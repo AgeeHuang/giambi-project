@@ -1,7 +1,8 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import cx from 'classnames';
 
 const Contact: React.FC<{}> = () => {
+  const defaultIconClass = 'page-contact__icon';
   return (
     <div className="page-contact">
       <div className="page-contact__social-media">
@@ -11,9 +12,11 @@ const Contact: React.FC<{}> = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon
-            className="page-contact__icon"
-            icon={['fab', 'linkedin']}
+          <i
+            className={cx(
+              defaultIconClass,
+              'fab fa-linkedin',
+            )}
           />
         </a>
         <a
@@ -22,9 +25,11 @@ const Contact: React.FC<{}> = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon
-            className="page-contact__icon"
-            icon={['fab', 'github-square']}
+          <i
+            className={cx(
+              defaultIconClass,
+              'fab fa-github-square',
+            )}
           />
         </a>
         <a
@@ -33,9 +38,11 @@ const Contact: React.FC<{}> = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon
-            className="page-contact__icon"
-            icon={['fab', 'facebook-square']}
+          <i
+            className={cx(
+              defaultIconClass,
+              'fab fa-facebook-square',
+            )}
           />
         </a>
       </div>
@@ -46,9 +53,7 @@ const Contact: React.FC<{}> = () => {
           href="srv-file5.gofile.io/download/uVs0sc/Giambi.pdf"
         >
           <span>
-            <FontAwesomeIcon
-              icon={['fas', 'arrow-alt-circle-down']}
-            />
+            <i className="fas fa-arrow-alt-circle-down fa-sm" />
           </span>
           <span>
             RESUME

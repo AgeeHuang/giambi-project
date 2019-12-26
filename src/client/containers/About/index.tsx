@@ -1,24 +1,25 @@
 import React from 'react';
-import { IconName, IconPrefix } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import cx from 'classnames';
 
 const About: React.FC<{}> = () => {
   const icons = [
-    ['fab', 'js-square'],
-    ['fab', 'html5'],
-    ['fab', 'css3-alt'],
-    ['fab', 'react'],
-    ['fab', 'sass'],
-    ['fab', 'node-js'],
+    ['fab', 'fa-js-square', 'fa-sm'],
+    ['fab', 'fa-html5', 'fa-sm'],
+    ['fab', 'fa-css3-alt', 'fa-sm'],
+    ['fab', 'fa-react', 'fa-sm'],
+    ['fab', 'fa-sass', 'fa-sm'],
+    ['fab', 'fa-node-js', 'fa-sm'],
   ];
   return (
     <div className="page-about">
       {
-        icons.map((icon: [IconPrefix, IconName]) => (
-          <FontAwesomeIcon
+        icons.map(icon => (
+          <i
             key={icon[1]}
-            className="page-about__icon"
-            icon={icon}
+            className={cx(
+              icon.join(' '),
+              'page-about__icon',
+            )}
           />
         ))
       }

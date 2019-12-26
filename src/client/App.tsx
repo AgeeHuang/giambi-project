@@ -1,5 +1,5 @@
 import React from 'react';
-import { library } from '@fortawesome/fontawesome-svg-core';
+import { library, config, dom } from '@fortawesome/fontawesome-svg-core';
 import {
   faRetweet,
   faProjectDiagram,
@@ -44,6 +44,10 @@ library.add(
   faNodeJs,
   faSass,
 );
+if (process.env.NODE_ENV === 'production') {
+  config.autoAddCss = false;
+}
+dom.watch();
 
 const App: React.FC<{}> = () => {
   return (

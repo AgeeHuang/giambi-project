@@ -1,6 +1,5 @@
 import React from 'react';
 import cx from 'classnames';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { useGlobalContext, constant } from '../../store';
 
@@ -30,7 +29,7 @@ const LightSwitch: React.FC<{}> = () => {
             'light-switch__turn-off',
           )}
         >
-          <FontAwesomeIcon icon={['fas', 'minus']} />
+          <i className="fas fa-minus fa-sm" />
         </button>
         <button
           type="button"
@@ -40,7 +39,7 @@ const LightSwitch: React.FC<{}> = () => {
             'light-switch__turn-on',
           )}
         >
-          <FontAwesomeIcon icon={['far', 'circle']} />
+          <i className="far fa-circle fa-sm" />
         </button>
       </div>
     </div>

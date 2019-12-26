@@ -1,7 +1,8 @@
 const webpack = require('webpack');
 const path = require("path");
-const TerserPlugin = require('terser-webpack-plugin');
+const MinifyPlugin = require("babel-minify-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   target: 'web',
@@ -17,7 +18,7 @@ module.exports = {
     filename: '[name].js',
     chunkFilename: '[name].chunk.js'
   },
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-map',
   resolve: {
     modules: ['node_modules'],
     extensions: ['.js', '.jsx', '.html', '.tsx', '.ts'],
@@ -56,22 +57,13 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.optimize.ModuleConcatenationPlugin(),
+    new MinifyPlugin(),
     new MiniCssExtractPlugin({
       filename: 'styles.css',
       chunkFilename: '[id].css',
     }),
-    new webpack.DefinePlugin({
-      process: {
-        env: {
-          NODE_ENV: JSON.stringify('production'),
-        },
-      },
-    }),
   ],
-  optimization: {
-    minimize: true,
-    minimizer: [new TerserPlugin()],
-  },
   stats: {
     colors: true,
     modules: false,

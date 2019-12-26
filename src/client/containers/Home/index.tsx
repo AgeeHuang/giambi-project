@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useGlobalContext } from '../../store';
 
 const Home: React.FC<{}> = () => {
@@ -16,7 +15,7 @@ const Home: React.FC<{}> = () => {
           onClick={() => dispatch({ type: 'HANDLE_CONTENT', payload: 'about' })}
         >
           <span className="page-home__nav-icon">
-            <FontAwesomeIcon icon={['fas', 'laptop-code']} />
+            <i className="fas fa-laptop-code fa-sm" />
           </span>
           <span className="page-home__nav-name">
             Web developer
@@ -27,7 +26,7 @@ const Home: React.FC<{}> = () => {
           onClick={() => dispatch({ type: 'HANDLE_CONTENT', payload: 'experinces' })}
         >
           <span className="page-home__nav-icon">
-            <FontAwesomeIcon icon={['fas', 'project-diagram']} />
+            <i className="fas fa-project-diagram fa-sm" />
           </span>
           <span className="page-home__nav-name">
             Experinces
@@ -38,7 +37,7 @@ const Home: React.FC<{}> = () => {
           onClick={() => dispatch({ type: 'HANDLE_CONTENT', payload: 'contact' })}
         >
           <span className="page-home__nav-icon">
-            <FontAwesomeIcon icon={['fas', 'retweet']} />
+            <i className="fas fa-retweet fa-sm" />
           </span>
           <span className="page-home__nav-name">
             Contact Me

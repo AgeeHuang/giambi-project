@@ -57,7 +57,11 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
-      process: { env: JSON.stringify('development') },
+      process: {
+        env: {
+          NODE_ENV: JSON.stringify('development'),
+        },
+      },
     }),
   ],
   stats: {
