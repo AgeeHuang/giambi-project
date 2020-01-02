@@ -18,7 +18,7 @@ module.exports = {
     filename: '[name].js',
     chunkFilename: '[name].chunk.js'
   },
-  devtool: 'source-map',
+  devtool: 'hidden-source-map',
   resolve: {
     modules: ['node_modules'],
     extensions: ['.js', '.jsx', '.html', '.tsx', '.ts'],
