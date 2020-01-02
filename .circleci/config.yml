@@ -16,6 +16,7 @@ jobs:
           fingerprints:
             - "9b:1a:fa:4f:66:5e:ca:57:32:89:54:08:d0:23:bf:fb"
       - run: ssh giambi@157.245.198.103
+      - run: y
       - run: pwd
 
 workflows:
