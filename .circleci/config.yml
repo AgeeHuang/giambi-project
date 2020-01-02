@@ -6,6 +6,7 @@ jobs:
       - image: circleci/node:10.18.0
     steps:
       - checkout
+      - run: npm install
       - run: npm test
 workflows:
   version: 2.1
