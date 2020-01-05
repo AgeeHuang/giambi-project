@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -r @babel/register -r ./test/helpers.js -r ./test/dom.js ./test/*.spec.js",
+    "test": "mocha -r test/babel-register.js -r test/helpers.js src/**/*.spec.js",
     "clean": "rm -rf dist",
     "serve": "node dist/server.js",
-    "dev:run": "yarn clean && yarn dev:server && yarn serve",
+    "run:dev": "yarn clean && yarn dev:server && yarn serve",
     "dev:server": "webpack --config webpack.server.config.js",
-    "prod:build": "yarn clean && yarn prod:client && yarn prod:server",
+    "build:prod": "yarn clean && yarn prod:client && yarn prod:server",
     "prod:client": "webpack --config webpack.client.prod.config.js",
     "prod:server": "webpack --config webpack.server.prod.config.js"
   },
@@ -20,7 +20,8 @@
     "classnames": "^2.2.6",
     "express": "^4.17.1",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.7.5",
@@ -74,6 +75,7 @@
     "webpack-dev-middleware": "^3.7.2",
     "webpack-dev-server": "^3.9.0",
     "webpack-hot-middleware": "^2.25.0",
+    "webpack-manifest-plugin": "^2.2.0",
     "webpack-node-externals": "^1.7.2"
   }
 }

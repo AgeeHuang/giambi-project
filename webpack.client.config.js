@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require("path");
+const ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
   target: 'web',
@@ -56,6 +57,7 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
+    new ManifestPlugin(),
     new webpack.DefinePlugin({
       process: {
         env: {
