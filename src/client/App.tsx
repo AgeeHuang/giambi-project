@@ -6,6 +6,8 @@ import {
   faLaptopCode,
   faMinus,
   faArrowAltCircleDown,
+  faGlobeAsia,
+  faMapMarkedAlt,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faCircle,
@@ -22,7 +24,10 @@ import {
   faGithubSquare,
 } from '@fortawesome/free-brands-svg-icons';
 
-import Routes from './routes';
+import Home from './containers/Home';
+import About from './containers/About';
+import Experinces from './containers/Experinces';
+import Contact from './containers/Contact';
 import Layout from './components/Layout';
 import { GlobalProvider } from './store';
 import './styles/index.scss';
@@ -43,6 +48,8 @@ library.add(
   faReact,
   faNodeJs,
   faSass,
+  faGlobeAsia,
+  faMapMarkedAlt,
 );
 if (process.env.NODE_ENV === 'production') {
   config.autoAddCss = false;
@@ -53,7 +60,10 @@ const App: React.FC<{}> = () => {
   return (
     <GlobalProvider>
       <Layout>
-        <Routes />
+        <Home />
+        <About />
+        <Experinces />
+        <Contact />
       </Layout>
     </GlobalProvider>
   );

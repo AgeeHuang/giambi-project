@@ -1,107 +1,62 @@
 import React from 'react';
+import { Element } from 'react-scroll';
+import Experince from './Experince';
 import dipp from '../../assets/dipp_color.png';
-import eztravel from '../../assets/eztravel.png';
-import sparkamplify from '../../assets/sparkamplify.jpg';
+import eztravel from '../../assets/ez.png';
+import sparkamplify from '../../assets/sa.png';
 
 const Experinces: React.FC<{}> = () => {
+  const experinces = [
+    {
+      className: 'page-experinces__ez-logo',
+      data: {
+        resource: eztravel,
+        link: '//www.eztravel.com.tw/',
+        alt: 'ezTravel logo',
+        company: 'EzTravel',
+        role: 'Frontend Developer',
+        dates: 'Jan 2015 - April 2017',
+        location: 'Taipei, TW',
+      },
+    },
+    {
+      className: 'page-experinces__sa-logo',
+      data: {
+        resource: sparkamplify,
+        link: '//www.sparkamplify.com/',
+        alt: 'sparkamplify logo',
+        company: 'SparkAmplify',
+        role: 'Frontend Developer',
+        dates: 'May 2017 - May 2018',
+        location: 'Taipei, TW',
+      },
+    },
+    {
+      className: 'page-experinces__dipp-logo',
+      data: {
+        resource: dipp,
+        link: '//marketing.withdipp.com/',
+        alt: 'dipp logo',
+        company: 'Dipp',
+        role: 'Software Engineer',
+        dates: 'May 2018 - Present',
+        location: 'Taipei, TW',
+      },
+    },
+  ];
   return (
-    <div className="page-experinces">
-      <ul className="page-experinces__list">
-        <li className="page-experinces__list-item">
-          <aside className="page-experinces__logo">
-            <a
-              className="page-experinces__link"
-              href="//marketing.withdipp.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <figure>
-                <img
-                  src={dipp}
-                  width={50}
-                  height={50}
-                  alt="dipp logo"
-                />
-                <figcaption>Dipp</figcaption>
-              </figure>
-            </a>
-          </aside>
-          <section className="page-experinces__desc">
-            <h3 className="page-experinces__job-title">
-              Software Engineer
-            </h3>
-            <h4 className="page-experinces__time">
-              May 2018 - Present
-            </h4>
-            <h4 className="page-experinces__location">
-              Taipei, Taiwan
-            </h4>
-          </section>
-        </li>
-        <li className="page-experinces__list-item">
-          <aside className="page-experinces__logo">
-            <a
-              className="page-experinces__link"
-              href="//www.sparkamplify.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <figure>
-                <img
-                  src={sparkamplify}
-                  width={50}
-                  height={50}
-                  alt="sparkamplify logo"
-                />
-                <figcaption>SparkAmplify</figcaption>
-              </figure>
-            </a>
-          </aside>
-          <section className="page-experinces__desc">
-            <h3 className="page-experinces__job-title">
-              Frontend Engineer
-            </h3>
-            <h4 className="page-experinces__time">
-              May 2017 - May 2018
-            </h4>
-            <h4 className="page-experinces__location">
-              Taipei, Taiwan
-            </h4>
-          </section>
-        </li>
-        <li className="page-experinces__list-item">
-          <aside className="page-experinces__logo">
-            <a
-              className="page-experinces__link"
-              href="//www.eztravel.com.tw/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <figure>
-                <img
-                  src={eztravel}
-                  width={50}
-                  height={50}
-                  alt="eztravel logo"
-                />
-                <figcaption>EzTravel</figcaption>
-              </figure>
-            </a>
-          </aside>
-          <section className="page-experinces__desc">
-            <h3 className="page-experinces__job-title">
-              Frontend Engineer
-            </h3>
-            <h4 className="page-experinces__time">
-              Jan 2015 - May 2017
-            </h4>
-            <h4 className="page-experinces__location">
-              Taipei, Taiwan
-            </h4>
-          </section>
-        </li>
-      </ul>
-    </div>
+    <Element name="work">
+      <section className="page page-experinces">
+        {
+          experinces.map(experince => (
+            <Experince
+              key={experince.className}
+              {...experince}
+            />
+          ))
+        }
+      </section>
+    </Element>
   );
 }
 

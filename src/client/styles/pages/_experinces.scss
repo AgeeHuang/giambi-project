@@ -1,21 +1,76 @@
 .page-experinces {
+  background-color: #ffaf7b;
+  align-items: stretch;
+  position: relative;
+  overflow: hidden;
+  @include responsive-common(flex-direction, row, row, column);
   &__list-item {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
   }
-  &__logo {
+  &__list {
+    display: flex;
+    flex-direction: row;
+  }
+  &__detail {
+    position: absolute;
+    left: 0;
+    right: 0;
+    transition: .3s;
     text-align: center;
+    text-shadow: 1px 1px 3px #3c3c3c;
+    @include responsive-common(top, calc(50% - 1rem), calc(50% - 1rem), calc(50% - 3rem));
+  }
+  &__job {
     flex: 1;
+    position: relative;
+    transition: .3s;
+    user-select: none;
+    @media not all and (pointer: coarse) {
+      filter: brightness(0.6);
+      &:hover {
+        filter: none;
+        .page-experinces__detail {
+          top: calc(50% - 3rem);
+        }
+        .page-experinces__link {
+          opacity: 1;
+        }
+      }
+    }
   }
-  &__job-title {
-    font-size: 2.4rem;
+  &__logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(30px, 20px);
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
   }
-  &__link:hover {
-    text-decoration: underline;
+  &__dipp-logo {
+    background-color: #ec6f66;
   }
-  &__time,
-  &__location {
-    font-size: 1.2rem;
+  &__sa-logo {
+    background-color: #4568dc;
+  }
+  &__ez-logo {
+    background-color: #6D8185;
+  }
+  &__role,
+  &__company-name {
+    @include responsive-common(font-size, 2rem, 1.7rem);
+  }
+  &__link,
+  &__location,
+  &__dates {
+    @include responsive-common(font-size, 1.2rem);
+  }
+  &__link {
+    transition: .3s;
+    @include hover-support() {
+      opacity: 0;
+    }
   }
 }

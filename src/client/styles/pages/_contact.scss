@@ -1,26 +1,35 @@
 .page-contact {
-  font-size: 3rem;
+  $color: #990011FF;
+  max-height: 50vh;
+  background-color: $color;
+  @include responsive-common(font-size, 3rem, 3rem, 5rem);
   &__social-media {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
-  &__link:hover {
-    color: #E5A539;
-    border-color: #E5A539;
+  &__link {
+    transition: .3s;
+    @include hover-support() {
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
   }
-  &__resume-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    margin: 20px;
-    padding: 5px 15px;
+  &__wrap {
     border: 2px solid;
     border-radius: 5px;
-    &:hover {
-      color: #E5A539;
-      border-color: #E5A539;
-    }
+    padding: 70px 30px;
+    width: 70vw;
+    max-width: 500px;
+    position: relative;
+  }
+  &__contact-me {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    padding: 0 10px;
+    white-space: nowrap;
+    background-color: $color;
+    transform: translate(-50%, -50%);
   }
 }
