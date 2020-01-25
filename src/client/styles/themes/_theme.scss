@@ -1,28 +1,27 @@
 .main-theme {
-  font-size: 2rem;
-  color: #000000;
   &__body {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     position: relative;
-    background-image: radial-gradient(
-      100vw 600px at 50% 0,
-      #b7b7b7 20%,
-      #a7a7a7 50%,
-      #777777 90%
-    );
+    // background-image: radial-gradient(
+    //   100vw 600px at 50% 0,
+    //   #b7b7b7 20%,
+    //   #a7a7a7 50%,
+    //   #777777 90%
+    // );
   }
   &--night {
     color: #ffffff;
     .main-theme__body {
-      background-image: radial-gradient(
-        100vw 600px at 50% 0,
-        #272d3a 20%,
-        #161a21 50%,
-        #000000 90%
-      );
+      background-color: #263137;
+      // background-image: radial-gradient(
+      //   100vw 600px at 50% 0,
+      //   #272d3a 20%,
+      //   #161a21 50%,
+      //   #000000 90%
+      // );
     }
   }
 }

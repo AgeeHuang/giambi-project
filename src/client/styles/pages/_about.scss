@@ -1,6 +1,46 @@
 .page-about {
-  font-size: 4rem;
-  &__icon {
-    margin: 10px;
+  font-size: 2rem;
+  user-select: none;
+  background-color: #28334A;
+  &__my-pic {
+    vertical-align: middle;
+    object-fit: none;
+    object-position: 50% 20%;
+    border-radius: 100px;
+    margin: 15px 0 5px;
+    border: 2px solid #fff;
+    background-color: #FBDE44;
+    @include responsive-common(width, 200px);
+    @include responsive-common(height, 200px);
+  }
+  &__point {
+    color: #F65058;
+  }
+  &__ul {
+    text-align: center;
+  }
+  &__li {
+    padding: 0.5rem 0;
+  }
+  &__tags {
+    font-size: 1.4rem;
+  }
+  &__tag {
+    display: inline-block;
+    margin: 2px 5px;
+    padding: 2px 5px;
+    border: 1px solid #FBDE44;
+    border-radius: 0.2rem;
+  }
+  &__download {
+    display: block;
+    padding: 5px 0;
+    border-radius: 5px;
+    color: #28334A;
+    max-width: 250px;
+    margin: auto;
+    position: relative;
+    font-size: 1.6rem;
+    background-color: #FBDE44;
   }
 }

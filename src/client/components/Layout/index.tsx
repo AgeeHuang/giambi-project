@@ -1,12 +1,12 @@
 import React from 'react';
 import cx from 'classnames';
 
-import LightSwitch from '../LightSwitch';
+// import LightSwitch from '../LightSwitch';
 import { useGlobalContext } from '../../store';
 
 const Layout: React.FC<{}> = ({ children }) => {
-  const { state, dispatch } = useGlobalContext();
-  const { content, turnOn } = state;
+  const { state } = useGlobalContext();
+  const { turnOn } = state;
   return (
     <div
       className={cx(
@@ -15,7 +15,7 @@ const Layout: React.FC<{}> = ({ children }) => {
       )}
     >
       <div className="main-theme__body">
-        <header
+        {/* {<header
           className={cx(
             'page-home__header',
             { 'page-home__header--hidden': content === 'home' },
@@ -27,10 +27,9 @@ const Layout: React.FC<{}> = ({ children }) => {
           >
             Back
           </div>
-        </header>
-        <LightSwitch />
+        </header>} */}
         {children}
-        <footer className="page-home__footer">
+        <footer className="page-footer">
           Copyrights © 2019 All Rights Reserved by Giambi Huang
         </footer>
       </div>
